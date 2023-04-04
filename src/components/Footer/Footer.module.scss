@@ -1,0 +1,36 @@
+//footer
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 12px;
+  }
+  
+  footer .footer__text {
+    font-size: 1.5rem;
+    
+    font-style: italic;
+    user-select: none;
+  }
+  
+  footer .footer__btn {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
+    opacity: 0.9;
+  
+    &:hover {
+      opacity: 1;
+    }
+
+   &:disabled {
+    opacity: 0.5;
+    cursor: default;
+   }
+  }

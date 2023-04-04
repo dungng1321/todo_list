@@ -1,0 +1,159 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid var(--primary-border-color);
+    margin-bottom: 10px;
+    position: relative;
+   
+  
+    &__text-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      overflow: hidden;
+      flex-direction: column;
+    }
+  
+    &__text {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: calc(100% - 16px);
+      font-size: 1.8rem;
+      // font-weight: 500;
+    }
+  
+    &__text--completed {
+      text-decoration: line-through;
+    }
+  
+    &__deadline {
+      display: flex;
+      align-items: center;
+      margin-top: 4px;
+  
+      &-date {
+        color: var(--text-date-color);
+        margin-right: 8px;
+        font-size: 1.4rem;
+        font-style: italic;
+      }
+  
+      &-clock {
+        font-size: 2rem;
+        color: var(--red-color);
+        margin-right: 8px;
+      }
+    }
+  
+    &__overdue-text {
+      color: var(--red-color);
+      font-size: 1.4rem;
+      font-style: italic;
+      margin-top: 4px;
+    }
+  
+    &__btns {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-left: auto;
+  
+      .btn__check {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        cursor: pointer;
+        outline: none;
+  
+        input[type="checkbox"] {
+          // appearance: none;
+  
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          position: relative;
+          cursor: pointer;
+          outline: none;
+          transition: all 0.2s;
+        }
+      }
+  
+      .btn__edit {
+        border: none;
+        background-color: var(--background-color-edit-btn);
+        cursor: pointer;
+        padding: 8px 8px;
+        border-radius: 8px;
+        color: var(--white-color);
+  
+        &:hover {
+          background-color: var(--secondary-color);
+        }
+  
+        .btn__edit-icon {
+          color: var(--white-color);
+          font-size: 2rem;
+          transition: color 0.2s;
+        }
+      }
+  
+      .btn__delete {
+        border: none;
+        background-color: var(--background-color-delete-btn);
+        padding: 8px 8px;
+        cursor: pointer;
+        border-radius: 8px;
+        color: var(--white-color);
+        margin-left: 8px;
+  
+        &:hover {
+          background-color: var(--red-color);
+        }
+  
+        .btn__delete-icon {
+          font-size: 2rem;
+          transition: color 0.2s;
+        }
+      }
+    }
+  }
+  
+  // tooltip
+  
+  .tooltip {
+    position: absolute;
+    z-index: 3;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    max-width: 320px;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: -16px;
+      left: 30%;
+      margin-left: -5px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent transparent var(--black-color) transparent;
+    }
+  }
+  
+  .todo-item__text:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  

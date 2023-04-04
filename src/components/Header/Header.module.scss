@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .header__title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+
+  .header__button {
+    border: none;
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    padding: 10px 14px;
+    opacity: 0.9;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    .header__icon {
+      font-size: 2rem;
+      color: var(--white-color);
+    }
+  }
+}

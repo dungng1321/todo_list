@@ -1,0 +1,35 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+@import "normalize.css";
+
+:root {
+  --primary-color: #af87ce;
+  --secondary-color: #429ebd;
+  --title-color: #575fcf;
+  --text-date-color: #999;
+  --white-color: #fff;
+  --primary-border-color: #ccc;
+  --background-color-delete-btn: #d91e26;
+  --red-color: #ff0000;
+  --background-color-edit-btn: #00ad6f;
+  --color-btn-save: #27ae60;
+  --background-color-btn-main: #dcdde1;
+  --black-color: #323232
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  cursor: default;
+}

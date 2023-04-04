@@ -1,0 +1,28 @@
+{
+  "todos": [
+    {
+      "text": "Đá bóng",
+      "deadlineDate": "2023-04-13T11:36",
+      "isCompleted": false,
+      "id": 1
+    },
+    {
+      "text": "Hoc bai",
+      "deadlineDate": "2023-04-13T11:36",
+      "isCompleted": false,
+      "id": 2
+    },
+    {
+      "text": "khong chơi game....",
+      "deadlineDate": "2023-04-04T12:46",
+      "isCompleted": false,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "text": "Hoc la trinh tai F8",
+      "deadlineDate": "",
+      "isCompleted": false
+    }
+  ]
+}
